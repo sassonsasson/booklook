@@ -15,6 +15,7 @@
     success: function(data) {
       // readBook(data)
       // console.log(data);
+      console.log(data)
 
         var source   = $("#book-template").html();
         var template = Handlebars.compile(source);
@@ -23,7 +24,7 @@
           pagenum: data.items[0].volumeInfo.pageCount,
           publisher: data.items[0].volumeInfo.publisher,
           description: data.items[0].volumeInfo.description,
-          img: data.items[0].volumeInfo.imageLinks.smallThumbnail
+          img: data.items[0].volumeInfo.imageLinks.thumbnail
         }
 
          // $("#book-template").html(template(data));
@@ -46,26 +47,4 @@
   });
 
 
-       
-        // title: $('#booktitle').val(),
-        // desc: $('#bookdesc').val(),
-        // auth: $('#bookauth').val(),
-        // imgurl: $('#imageurl').val(),
-        // pagenum: $('#pagenum').val(),
-        // minperday: $('#minperday').val()
-
-      // $('.siteBooks').append(template(newbook));
-
-      // var  booktitle = $('#booktitle').val();
-      // var  bookdesc = $('#bookdesc').val();
-      // var  bookauth = $('#bookauth').val();
-      // var  imageurl = $('#imageurl').val();
-      // var  pagenum = $('#pagenum').val();
-      // var  minperday = $('#minperday').val();
-    // app.createPost(text);
-    // app.renderPosts();
-   
-    // $('.siteBooks').append('<p class="text-center"> this book will take you ' + (pagenum / minperday) +' '+ 'days to read </p>' +
-    //   '<h1 class="text-center">'+booktitle+'</h1>' + '<h2 class="text-center"> Written by ' + bookauth + '</h2>' +
-    //   '<p class="text-center">' + bookdesc + '</p>' + '<img src="'+imageurl+'">');
-    
+     
